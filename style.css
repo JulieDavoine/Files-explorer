@@ -1,3 +1,4 @@
+
 input[type=text] {
     width: 130px;
     -webkit-transition: width 0.4s ease-in-out;
@@ -5,4 +6,15 @@ input[type=text] {
 }
 input[type=text]:focus {
     width: 30%;
+}
+
+.categories{
+    background-color: #0077BA;
+    height: 400px;
+}
+.dossier{
+    background-color: #dfdbda;
+}
+.lien{
+    color: black;
 }

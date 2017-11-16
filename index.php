@@ -24,15 +24,27 @@
     <div id="main" class="container">
         <div class="row">
                 <div class="col-4 categories">
-                    <h2>Catégories</h2>
-                    <h4>Documents</h4>
-                    <h4>Images</h4>
-                    <h4>Musique</h4>
-                    <h4>Vidéos</h4>
+                <?php
+                $adresse="./Test/"; //Adresse du dossier sans oublier le / à la fin.
+                $dossier=Opendir($adresse); //Ouverture du dossier.
+                
+                while ($Fichier = readdir($dossier)) //On affiche les fichiers les uns après les autres.
+                {
+                    if ($Fichier != "." && $Fichier != "..") 
+                    {
+                        echo "<a class='lien' href='.$adresse.$Fichier.' target='_blank'>'.$Fichier.'</a><br>'";
+                    } 
+                     //Maintenant, on affiche les fichiers sous forme de liens vers les fichiers 
+                     //(NB : Les lien sont en target="_blank" ce qui signifie qu'ils ouvrirons une nouvelle page dans votre navigateur !).
+                    
+                }
+                closedir($dossier);
+                ?> 
                 </div>
                 <div class="col-8 dossier"><h2>Dossier/Fichier</h2></div>
         </div>
     </div>
+    
     <footer>
         <div class="container">
                 <h2>FOOTER</h2>
