@@ -22,7 +22,12 @@
 	echo '<fieldset><legend>Liste des fichiers :</legend><br>'; 
 	while ($fichier = readdir($dossier))
 	{
-	    $n++; // mettre les image a la place de cette varaiable
+	    
+
+echo '<img src="Files-explorer/image2.gif" alt="Texte Alternatif">';
+
+
+
 	    if (($fichier != ".") && ($fichier != "..")) 
 	        if (is_dir($adresse.'/'.$fichier))
 	            echo '<a href="file_explorer.php?dossier='.$adresse.'/'.$fichier.'">'.$n.' - '.$fichier.'</a><br>';
